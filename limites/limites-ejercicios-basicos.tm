@@ -1,6 +1,6 @@
 <TeXmacs|2.1.1>
 
-<style|<tuple|generic|manu-macros|maxima>>
+<style|<tuple|generic|manu-macros|maxima|cancel>>
 
 <\body>
   <section|Límite en un Punto>
@@ -240,7 +240,7 @@
 
   <section|Indeterminación>
 
-  <subsection|Ejemplos>
+  <subsection|Ejemplos con Diferencia de Cuadrado y Factor Común>
 
   <with|font-series|bold|1) <math|<limite|x|3|<frac|x<rsup|2>-9|x-3>>>>
 
@@ -289,8 +289,116 @@
   <\math>
     <limite|x|2|<frac|x<rsup|2>-2x|x-2>>
 
-    =<limite|x|2|<frac|x<rsup|2>-2x|x-2>>
+    =<limite|x|2|<frac|x<rsup|2>-2x|x-2>><text|, sacamos
+    <with|font-series|bold|factor común >\Q<with|color|red|x>\Q en el
+    numerador>
+
+    =<limite|x|2|<frac|x<around*|(|x-2|)>|x-2>><text| y luego eliminamos la
+    <with|font-series|bold|indeterminacion>, cancelando los términos
+    <with|color|red|x-2>>
+
+    =<limite|x|2|x>
+
+    =<with|font-series|bold|2>
   </math>
+
+  \;
+
+  <with|font-series|bold|4) <math|<limite|x|7|><frac|x-7|3x<rsup|2>-21x>>>
+
+  <\math>
+    <limite|x|7|><frac|x-7|3x<rsup|2>-21x><text|, sacamos
+    <with|font-series|bold|factor común >\Q<with|color|red|3x>\Q en el
+    denominador >
+
+    =<limite|x|7|><frac|x-7|3x<around*|(|x-7|)>><text|, luego eliminamos la
+    <with|font-series|bold|indeterminacion>, cancelando los términos
+    <with|color|red|x-7>>
+
+    =<limite|x|7|><frac|1|3x>
+
+    =<frac|1|3\<times\>7>
+
+    =<with|font-series|bold|<frac|1|21>>
+  </math>
+
+  \ <new-page*>
+
+  <subsection|Ejemplos con Trinomio <math|x<rsup|2>+bx+c>>
+
+  <with|font-series|bold|1) <math|<limite|x|1|<frac|x<rsup|2>+2x-3|x-1>>>>
+
+  <\math>
+    <limite|x|1|<frac|x<rsup|2>+2x-3|x-1>><text|,
+    <with|font-series|bold|factorizamos> el <with|font-series|bold|trinomio>
+    del numerador>
+
+    =<limite|x|1|<frac|<around*|(|x+3|)><around*|(|x-1|)>|x-1>><text|,
+    eliminamos la <with|font-series|bold|indeterminación> cancelando los
+    términos <with|color|red|x-1>>
+
+    =<limite|x|1|x+3>
+
+    =1+3
+
+    =<with|font-series|bold|4>
+  </math>
+
+  <with|font-series|bold|2) <math|<limite|x|4|<frac|x-4|x<rsup|2>-2x-8>>>>
+
+  <\math>
+    <limite|x|4|<frac|x-4|x<rsup|2>-2x-8>><text|,
+    <with|font-series|bold|factorizamos> el <with|font-series|bold|trinomio>
+    del denominador>
+
+    =<limite|x|4|<frac|x-4|<around*|(|x-4|)><around*|(|x+2|)>>><text|,
+    eliminamos la <with|font-series|bold|indeterminación> cancelando los
+    términos <with|color|red|x-4>>
+
+    =<limite|x|4|<frac|1|x+2>>
+
+    =<frac|1|4+2>
+
+    =<with|font-series|bold|<frac|1|6>>
+  </math>
+
+  <subsection|Ejemplos con Trinomio <math|ax<rsup|2>+bx+c>>
+
+  <with|font-series|bold|1) <math|<limite|x|-1|<frac|5x<rsup|2>+7x+2|x+1>>>>
+
+  <\math>
+    <limite|x|-1|<frac|5x<rsup|2>+7x+2|x+1>>
+
+    =<limite|x|-1|<frac|<around*|(|x+1|)><around*|(|5x+2|)>|x+1>>
+
+    =<limite|x|-1|5x+2>
+
+    =5<around*|(|-1|)>+2
+
+    =<with|font-series|bold|-3>
+  </math>
+
+  \;
+
+  <with|font-series|bold|2) <math|<limite|x|3|<frac|x-3|3x<rsup|2>-5x-12>>>>
+
+  <\math>
+    <limite|x|3|<frac|x-3|3x<rsup|2>-5x-12>>
+
+    =<limite|x|3|<frac|x-3|<around*|(|x-3|)><around*|(|3x+4|)>>>
+
+    =<limite|x|3|<frac|1|3x+4>>
+
+    =<frac|1|3\<times\>3+4>
+
+    =<with|font-series|bold|<frac|1|13>>
+  </math>
+
+  <new-page*>
+
+  <section|Limites por Racionalización>
+
+  \;
 </body>
 
 <\initial>
@@ -304,12 +412,15 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|1|../../../../../.TeXmacs/texts/scratch/no_name_6.tm>>
-    <associate|auto-2|<tuple|1.1|1|../../../../../.TeXmacs/texts/scratch/no_name_6.tm>>
-    <associate|auto-3|<tuple|1.2|1|../../../../../.TeXmacs/texts/scratch/no_name_6.tm>>
-    <associate|auto-4|<tuple|1.3|2|../../../../../.TeXmacs/texts/scratch/no_name_6.tm>>
-    <associate|auto-5|<tuple|2|2|../../../../../.TeXmacs/texts/scratch/no_name_6.tm>>
-    <associate|auto-6|<tuple|2.1|2|../../../../../.TeXmacs/texts/scratch/no_name_6.tm>>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-2|<tuple|1.1|1>>
+    <associate|auto-3|<tuple|1.2|2>>
+    <associate|auto-4|<tuple|1.3|3>>
+    <associate|auto-5|<tuple|2|4>>
+    <associate|auto-6|<tuple|2.1|4>>
+    <associate|auto-7|<tuple|2.2|?>>
+    <associate|auto-8|<tuple|2.3|?>>
+    <associate|auto-9|<tuple|3|?>>
   </collection>
 </references>
 
